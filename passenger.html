@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>passenger details</h1>
+        name<input type="text" id="t1">
+        email<input type="text" id="t2">
+        age<input type="text" id="t3" onclick="mail()">
+        gender<input type="text" id="t4" onclick="age()">
+        <button onclick="gen()">submit</button>
+        <script>
+            function check1()
+            {
+                var e=document.getElementById('t2').value;
+                var a=document.getElementById('t3').value;
+                var g=document.getElementById('t4').value;
+                var flag1="false";
+                var flag2="false";
+                var flag3="false";
+                var pattern=/^[a-zA-Z]+@[a-zA-Z].[a-zA-Z]$/;
+                if(e.match(pattern))
+                {
+                    flag1="true";
+                }
+                
+                if(a>=1&&age<=100)
+                {
+                     flag2="true";
+                }
+               
+                if(g=="male"||g=="female")
+                {
+                   flag3="true";
+                }
+               
+                if(flag1=="true"&&flag2=="true"&&flag3=="true")
+                {
+                    alert("thankyou");
+                }
+                else
+                {
+                     alert("enter valid details");
+                }
+            }
+            function mail()
+            {
+                var e=document.getElementById('t2').value;
+                var pattern=/^[a-zA-Z]+@[a-zA-Z].[a-zA-Z]$/;
+                if(!e.match(pattern))
+                {
+                    alert("mail");
+                }
+                            }
+            function age()
+            {
+                var a=document.getElementById('t3').value; 
+                if(!(a>=1&&age<=100))
+                {
+                    alert("age");
+                }
+               
+            }
+            function gen()
+            {
+                 var g=document.getElementById('t4').value;
+                 if(!(g=="male"||g=="female"))
+                 {
+                    alert("gender");
+                } 
+            }
+            function dis()
+            {
+                if(!mail())
+                {
+                    alert("mail");
+                }
+                if(!age())
+                {
+                    alert("age");
+                }
+                if(!gen())
+                {
+                    alert("gender");
+                }
+                else
+                    alert("thanks");
+            }
+            
+            </script>
+    </body>
+</html>

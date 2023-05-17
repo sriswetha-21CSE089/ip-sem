@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        entertext<textarea rows="3" cols="5" id="t1"></textarea>
+        enter key<input type="text" id="t2">
+        <button onclick="fun()">search</button>
+        <div id="d"></div>
+        <script>
+            function fun()
+            {
+                var text1=document.getElementById("t1").value;
+                var key=document.getElementById("t2").value;
+                var count=0;
+                for(var i=0;i<text1.length;i++)
+                {
+                    if(text1.charAt(i)==key)
+                    {
+                        count++;
+                    }
+                }
+                document.getElementById('d').innerHTML=count;
+            }
+           
+        </script>
+    </body>
+</html>

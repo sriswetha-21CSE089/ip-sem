@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="d"></div>
+        <div id="d1"></div>
+        <script>
+            var c=prompt("enter name");
+            alert("name"+c);
+             var cd=new Date();
+             var o={month:"long",day:"numeric",year:"numeric"};
+             var fd=cd.toLocaleDateString("en-US",o);
+             document.getElementById('d').textContent=fd;
+              document.getElementById('d1').textContent=document.lastModified;
+              window.status="remeber me";
+        </script>
+    </body>
+</html>
